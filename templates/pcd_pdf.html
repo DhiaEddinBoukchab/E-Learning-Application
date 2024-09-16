@@ -1,0 +1,133 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PDF Summary</title>
+    <style>
+    .background-image {
+    
+    background-size: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding-bottom: 20%;
+    background-image: url(../../assets/file1.png);
+    padding-top: 10%;
+}
+.container {
+    max-width: 800px;
+    padding: 40px;
+    background-color: rgba(255, 255, 255, 0.8); /* Add transparency to the background color */
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    margin: 0 auto;
+    margin-top: 10%;
+    
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #555;
+}
+
+input[type="file"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+    display: none;
+}
+
+button[type="button"]{
+    margin-bottom: 20px;
+    margin-top: 20px;
+    padding: 12px 20px;
+    background-color: #FFC470;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-size: 16px;
+}
+button[type="submit"] {
+    padding: 12px 20px;
+    background-color: #FFC470;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-size: 16px;
+}
+
+button[type="button"]:hover,
+button[type="submit"]:hover {
+    background-color:#f8853f;
+}
+
+.selected-file {
+    margin-bottom: 10px;
+    font-size: 14px;
+    color: #555;
+}
+
+.error {
+    color: #dc3545;
+    text-align: center;
+    margin-top: 20px;
+}
+</style>
+    </style>
+</head>
+<body>
+    <div class="background-image">
+        <div class="container">
+            <h1>PDF Summary</h1>
+            <form method="POST" enctype="multipart/form-data">
+                <label for="pdf_file">Select PDF:</label>
+                <input type="file" id="pdf_file" name="pdf_file" accept=".pdf" required>
+                <div class="selected-file" id="selected_file_name"></div>
+                <button type="button" onclick="document.getElementById('pdf_file').click();">Browse PDF</button>
+                <button type="submit">Summarize</button>
+            </form>
+            <div class="error" id="error_message">
+                {% if error_message %}
+                    {{ error_message }}
+                {% endif %}
+            </div>
+            <div id="summary_display">
+                {% if summary %}
+                    <h2>Summary:</h2>
+                    <p>{{ summary }}</p>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('pdf_file').addEventListener('change', function() {
+            var fileName = this.files[0].name;
+            document.getElementById('selected_file_name').innerText = "Selected file: " + fileName;
+        });
+    </script>
+</body>
+</html>

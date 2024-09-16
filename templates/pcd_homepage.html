@@ -1,0 +1,255 @@
+
+<style>@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;500;600;700&family=Mulish:wght@400;500;600;700&display=swap");
+
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Josefin Sans", sans-serif;
+    }
+    
+    
+    body {
+        margin: 0;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    
+    .flex {
+        display: flex;
+    }
+    
+    
+    .justify-content-center {
+        justify-content: center;
+    }
+    .justify-content-space-around{
+        justify-content: space-around;
+    }
+    .row{
+        flex-direction: row;
+    }
+    .column{
+        flex-direction: column;
+    }
+    
+    /*Header*/
+    #header {
+        justify-content: space-between;
+    }
+    
+    #header-img {
+        padding-left: 15px;
+    }
+    
+    main {
+        height: 100%;
+    padding-bottom: 48px;
+    }
+    
+    
+    header {
+        padding: 20px;
+        overflow: hidden;
+        /*background-color: transparent;*/
+        align-items: center;
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: 0;
+        z-index: 9
+    }
+    
+    header a {
+        float: left;
+        color: #f2f2f2;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        font-size: 17px;
+    }
+    
+    header a:hover {
+        background-color: #f85afc;
+        color: white;
+        border-radius: 12px;
+    }
+    
+    #nav-bar{
+        flex-direction: row;
+    }
+    /*
+    header a.active {
+        background-color: #4CAF50;
+     color: white;
+    }
+    */
+    
+    @media screen and  (max-width: 992px){
+        header{
+            flex-direction: column;
+        }
+        #nav-bar{
+            flex-direction: column;
+            margin-bottom: 50px;
+        }
+    }
+    
+    /*banner*/
+    
+    h1 {
+        font-size: 48px;
+        line-height: 56px;
+    }
+    
+    
+    
+    #intro-title {
+        max-width: 400px;
+    }
+    
+    #intro-description {
+        padding-top: 12px;
+        font-size: 24px;
+        max-width: 600px;
+        font-weight: lighter;
+    }
+    
+    .banner {
+        padding-left: 10%;
+        flex-direction: column;
+        background-image: url(https://firebasestorage.googleapis.com/v0/b/flashcard-4dfc3.appspot.com/o/h1_hero.png?alt=media&token=b3d2a03c-6233-408a-aa42-5fae33b2434c);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+        min-height: 650px;
+        color: white;
+    }
+    
+    /*Service area*/
+    .service-area {
+        margin-top: -48px;
+        flex-direction: row;
+        justify-content: center;
+        color: black;
+    }
+    
+    .service-item {
+        margin: 16px;
+        display: flex;
+        box-shadow: 0 25px 60px rgba(66, 85, 164, 0.2);
+        padding: 29px 24px;
+        border-radius: 20px;
+        justify-content: space-evenly;
+        background: #fff
+    }
+    .service-item div{
+        padding: 0 8px;
+    }
+    
+    @media screen and (max-width: 992px) {
+        .service-area {
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+    
+    
+    /*video*/
+    
+    #video-div{
+        align-items: center;
+        height: 30%;
+        padding: 5% 0;
+    
+    }
+    #video-div h2{
+        padding: 40px 0;
+    
+    }
+    
+    /*form*/
+    #form-div{
+        padding: 32px 0;
+    }
+    input{
+        height: 50px;
+        width: 100%;
+    }
+    form{
+        padding: 50px 0;
+        width: 30%;
+    }
+    button{
+        font-size: large;
+        margin: 12px 0px;
+        border-radius: 16px;
+        border: none;
+        color: white;
+        background-color: #f8853f;
+        width: 10%;
+        height: 50px;
+    }
+    
+    /*footer*/
+    .footer-wrappper {
+        height: 20%;
+        padding: 24px 0 ;
+        color: white;
+    }
+    .footer-wrappper li{
+        color: white;
+    }
+    .footer-wrappper a{
+        color: white;
+    }
+    .footer-wrappper a:hover{
+        color: white;
+    }
+    .footer-bg {
+        background: #4255A4
+    }
+    .topic-content{
+        padding-top: 16px;
+    }
+    
+    #video{
+        height: 550px;
+        width:70%;
+        margin: 0 15%;
+        text-align:center;
+        align-self: center;
+        alignment: center;
+        display: block;
+        border: 5px solid red;
+        box-sizing:border-box ;
+    }
+    iframe{
+        width: 100%;
+        height: 100%;
+    }
+    </style>
+<header class="flex" id="header">
+    <div class="logo">
+        
+    </div>
+    <nav id="nav-bar" class="flex">
+        <a class="nav-link" href="pcd_homepage">Accueil </a>
+        <a class="nav-link" href="pcd_generate_course.html">À propos de nous</a>
+        
+        <a class="nav-link" href="pcd_service">Services</a>
+        <a class="nav-link" href="pcd_login">Nous contacter</a>
+        <a class="nav-link" href="pcd_login">Inscription</a>
+    </nav>
+</header>
+
+<main>
+    <!--    Banner -->
+    <section class="banner flex justify-content-center">
+        <div id="intro">
+            <h1 id="intro-title">Boostez votre apprentissage </h1>
+            <p id="intro-description">Explorez notre plateforme d'apprentissage en ligne, où les cours sont générés en un simple clic et où vous pouvez résumer des PDF en toute simplicité.</p>
+                
+        </div>
+    </section>
+<app-services></app-services>
+<app-contact></app-contact>

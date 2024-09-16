@@ -1,0 +1,83 @@
+<style>.services {
+    margin-top: 50px;
+}
+
+.service-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 40px;
+    margin-left: 10%;
+}
+
+.service {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.service-info {
+    padding: 20px;
+    text-align: center;
+    margin-right: 10%;
+}
+
+.service h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    font-family: "Josefin Sans", sans-serif;
+    color: #f8853f;
+}
+
+.service p {
+    font-size: 20px;
+    line-height: 1.5;
+}
+
+.service-image img {
+    max-width: 60%;
+    height: auto;
+    margin-top: 20px; /* Adjust spacing between image and paragraph */
+}
+
+.start-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: gray;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 12px;
+    transition: background-color 0.3s ease;
+    margin-top: 20px; /* Adjust spacing between paragraph and button */
+}
+
+.start-button:hover {
+    background-color: #0056b3;background-color: #f85afc;
+    color: white;
+    border-radius: 12px;
+}</style><section class="services">
+    <div class="service-wrapper">
+        <div class="service">
+            <div class="service-info">
+                <h2>Génération  de Cours </h2>
+                <p>Il vous suffit de nous fournir vos mots-clés désirés, et observez comment nous générons dynamiquement des cours complets adaptés à vos objectifs d'apprentissage</p>
+                <a href="pcd_generate_course.html" class="start-button" >Commencer</a>
+            </div>
+            <div class="service-image">
+                <img src="assets/gen.png" alt="Service 1 Image">
+            </div>
+        </div>
+    </div>
+    <div class="service-wrapper">
+        <div class="service">
+            <div class="service-image">
+                <img src="assets/pdf.jpg" alt="Service 2 Image">
+            </div>
+            <div class="service-info">
+                <h2>Résumé de PDF</h2>
+                <p>Téléchargez simplement votre document PDF, et laissez notre algorithme puissant extraire les informations clés. Obtenez une synthèse précise et concise, condensant le contenu en quelques phrases clés.</p>
+                <a href="pcd_pdf.html" class="start-button">Commencer</a>
+            </div>
+        </div>
+    </div>
+</section>

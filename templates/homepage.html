@@ -1,0 +1,339 @@
+<style>
+    @import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;500;600;700&family=Mulish:wght@400;500;600;700&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Josefin Sans", sans-serif;
+}
+
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.flex {
+    display: flex;
+}
+
+
+.justify-content-center {
+    justify-content: center;
+}
+.justify-content-space-around{
+    justify-content: space-around;
+}
+.row{
+    flex-direction: row;
+}
+.column{
+    flex-direction: column;
+}
+
+/*Header*/
+#header {
+    justify-content: space-between;
+}
+
+#header-img {
+    padding-left: 15px;
+}
+
+main {
+    height: 100%;
+padding-bottom: 48px;
+}
+
+
+header {
+    padding: 20px;
+    overflow: hidden;
+    /*background-color: transparent;*/
+    align-items: center;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 9
+}
+
+header a {
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+header a:hover {
+    background-color: #f85afc;
+    color: white;
+    border-radius: 12px;
+}
+#nav-bar{
+    flex-direction: row;
+}
+/*
+header a.active {
+    background-color: #4CAF50;
+ color: white;
+}
+*/
+
+@media screen and  (max-width: 992px){
+    header{
+        flex-direction: column;
+    }
+    #nav-bar{
+        flex-direction: column;
+        margin-bottom: 50px;
+    }
+}
+
+/*banner*/
+
+h1 {
+    font-size: 48px;
+    line-height: 56px;
+}
+
+
+#intro {
+
+}
+
+#intro-title {
+    max-width: 400px;
+}
+
+#intro-description {
+    padding-top: 12px;
+    font-size: 24px;
+    max-width: 600px;
+    font-weight: lighter;
+}
+
+.banner {
+    padding-left: 10%;
+    flex-direction: column;
+    background-image: url(https://firebasestorage.googleapis.com/v0/b/flashcard-4dfc3.appspot.com/o/h1_hero.png?alt=media&token=b3d2a03c-6233-408a-aa42-5fae33b2434c);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    min-height: 650px;
+    color: white;
+}
+
+/*Service area*/
+.service-area {
+    margin-top: -48px;
+    flex-direction: row;
+    justify-content: center;
+    color: black;
+}
+
+.service-item {
+    margin: 16px;
+    display: flex;
+    box-shadow: 0 25px 60px rgba(66, 85, 164, 0.2);
+    padding: 29px 24px;
+    border-radius: 20px;
+    justify-content: space-evenly;
+    background: #fff
+}
+.service-item div{
+    padding: 0 8px;
+}
+
+@media screen and (max-width: 992px) {
+    .service-area {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+
+/*video*/
+
+#video-div{
+    align-items: center;
+    height: 30%;
+    padding: 5% 0;
+
+}
+#video-div h2{
+    padding: 40px 0;
+
+}
+
+/*form*/
+#form-div{
+    padding: 32px 0;
+}
+input{
+    height: 50px;
+    width: 100%;
+}
+form{
+    padding: 50px 0;
+    width: 30%;
+}
+button{
+    font-size: large;
+    margin: 12px 0;
+    border-radius: 16px;
+    border: none;
+    color: white;
+    background-color: #f8853f;
+    width: 100%;
+    height: 50px;
+}
+
+/*footer*/
+.footer-wrappper {
+    height: 20%;
+    padding: 24px 0 ;
+    color: white;
+}
+.footer-wrappper li{
+    color: white;
+}
+.footer-wrappper a{
+    color: white;
+}
+.footer-wrappper a:hover{
+    color: white;
+}
+.footer-bg {
+    background: #4255A4
+}
+.topic-content{
+    padding-top: 16px;
+}
+
+#video{
+    height: 550px;
+    width:70%;
+    margin: 0 15%;
+    text-align:center;
+    align-self: center;
+    alignment: center;
+    display: block;
+    border: 5px solid red;
+    box-sizing:border-box ;
+}
+iframe{
+    width: 100%;
+    height: 100%;
+}
+</style>
+<header class="flex" id="header">
+    <div class="logo">
+        <img id="header-img" src="https://firebasestorage.googleapis.com/v0/b/flashcard-4dfc3.appspot.com/o/logo.png?alt=media&token=7c5e5197-74a5-41cd-806f-5a674aa10418" alt="Course Landing Page">
+    </div>
+    <nav id="nav-bar" class="flex">
+        <a class="nav-link" href="homepage">HOME</a>
+        <a class="nav-link" href="index_course">COURSE</a>
+        
+        <a class="nav-link" href="index_pdf">PDF</a>
+        <a class="nav-link" href="login">LOGIN</a>
+    </nav>
+</header>
+
+<main>
+    <!--    Banner -->
+    <section class="banner flex justify-content-center">
+        <div id="intro">
+            <h1 id="intro-title">Online Learning Platform</h1>
+            <p id="intro-description">Build skills with courses, certificates, and degrees online
+                from world-class universities and companies</p>
+        </div>
+    </section>
+    <!--    Service area-->
+    <div class="flex service-area">
+        <div class="service-item">
+            <div>
+                <img src="https://firebasestorage.googleapis.com/v0/b/flashcard-4dfc3.appspot.com/o/icon1.svg?alt=media&token=de737adf-d1c8-44a8-92f7-a90ea43ff2a8" alt="">
+            </div>
+            <div>
+                <h3>60+ UX courses</h3>
+                <p>The automated process all your website tasks.</p>
+            </div>
+        </div>
+        <div class="service-item">
+            <div style="width: 10px;height: 30px;">
+
+                <img src="./img/Capture d’écran (1).png" alt="">
+            </div>
+            <div>
+                <h3>30+ Teachers</h3>
+                <p>We have the most talented and motivated teachers</p>
+            </div>
+        </div>
+        <div class="service-item">
+            <div>
+                <img src="https://firebasestorage.googleapis.com/v0/b/flashcard-4dfc3.appspot.com/o/icon3.svg?alt=media&token=98d7aa5d-9d16-436d-be88-b75f4fa512b2" alt="">
+            </div>
+            <div>
+                <h3>1000h+ Practice</h3>
+                <p>Thousand hours practicing, hundred hand-on projects</p>
+            </div>
+        </div>
+    </div>
+
+
+    <!--    video
+    <div id="video-div" class="flex justify-content-space-around column">
+        <div class="flex justify-content-center">
+            <h2>Video about us</h2>
+        </div>
+
+        <div id="video">
+            <iframe src="https://www.youtube.com/embed/3oFAJtFE8YU"
+                    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+        </div>
+    </div>-->
+
+    <!--    form-->
+    <div id="form-div" class="flex justify-content-space-around column">
+        
+        <div class="submit-div flex justify-content-center">
+            <form id="form" class="flex column" action="register">
+                <a  href="register"><button type="submit" id="submit">REGISTER</button></a>
+                
+            </form>
+        </div>
+    </div>
+</main>
+
+<footer id="footer">
+    <div class="footer-wrappper footer-bg">
+        <!-- Footer Start-->
+        <!-- footer-bottom area -->
+        <div class="footer-bottom-area">
+            <div class="container">
+                <div class="footer-border">
+                    <div class="row d-flex align-items-center">
+                        <div class="col-xl-12 ">
+                            <div class="footer-copy-right text-center">
+                                <p>
+                                    <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                                    Copyright &copy;<script>document.write(new Date().getFullYear());</script>
+                                    All rights reserved
+                                    <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Footer End-->
+    </div>
+</footer>
+
+</body>

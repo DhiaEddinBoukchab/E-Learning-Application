@@ -1,0 +1,13 @@
+sentence-transformers
+uvicorn
+ctransformers
+langchain
+python-box
+streamlit
+requests
+PyPDF2
+fastapi
+fastapi.security
+pydantic
+langchain_community
+flask

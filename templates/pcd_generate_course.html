@@ -1,0 +1,118 @@
+
+<style>/* course-generator.component.css */
+    .background-image {
+        
+        background-size: cover;
+        background-position: center;
+        height: 100vh;
+        background-image: url('img/course.png');
+        padding-top: 20%;
+    }
+    .speech-bubble {
+        position: relative;
+        background-color: #F6E9B2;
+        border-radius: 10px;
+        padding: 10px 20px;
+        margin-top: 10px;
+        color: #DD5746;
+        text-align: center;
+        max-width: 200px; /* Adjust width as needed */
+    }
+    
+    .speech-bubble::before {
+        content: '';
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        border: solid transparent;
+        border-top-color: #f7f7f7;
+        border-width: 10px;
+        margin-left: -10px;
+    }
+    
+    .container {
+        max-width: 800px;
+        padding: 40px;
+        background-color: rgba(255, 255, 255, 0.8); /* Add transparency to the background color */
+        border-radius: 8px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        text-align: center;
+        margin: 0 auto;
+        
+        
+    }
+    
+    h1 {
+        color: #333333;
+        margin-bottom: 20px;
+    }
+    
+    form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    label {
+        font-weight: bold;
+        margin-bottom: 10px;
+        color: #555555;
+        font-size: 18px;
+    }
+    
+    input[type="text"] {
+        width: 100%;
+        padding: 12px;
+        margin-bottom: 20px;
+        border: 1px solid #cccccc;
+        border-radius: 5px;
+        outline: none;
+        transition: border-color 0.2s ease;
+        font-size: 16px;
+    }
+    
+    input[type="text"]:focus {
+        border-color: #f8853f;
+    }
+    
+    button[type="submit"] {
+        padding: 12px 20px;
+        background-color: #FFC470;
+        color: #ffffff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+        font-size: 16px;
+    }
+    
+    button[type="submit"]:hover {
+        background-color:#f8853f;
+    }
+    
+    .error-message {
+        color: #ff0000;
+        font-size: 14px;
+        margin-top: -10px;
+        margin-bottom: 20px;
+    }</style>
+<!-- generate.component.html -->
+
+    <div class="container">
+        <h1>Générateur de Cours</h1>
+        <form method="POST">
+            <label for="keyword">Entrez un mot-clé :</label>
+            <input type="text" id="keyword" name="keyword"  required>
+            <button type="submit">Générer</button>
+            </div>
+        </form>
+
+
+        {% if keyword %}
+        <p>Keyword entered: <strong>{{ keyword }}</strong></p>
+        {% endif %}
+        {% if response %}
+        <p> Generated course: <strong>{{ response }}</strong></p>
+        {% endif %}
+    </div>
+</div>
